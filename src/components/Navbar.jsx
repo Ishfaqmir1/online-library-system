@@ -1,4 +1,4 @@
-// src/components/Navbar.jsx
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ const Navbar = () => (
       <li><Link to="/add">Add Book</Link></li>
       <li>
         <a
-          href="https://github.com/yourusername/yourrepo" // 🔁 Replace with your GitHub repo
+          href="https://github.com/yourusername/yourrepo" 
           target="_blank"
           rel="noopener noreferrer"
           title="GitHub Repository"
