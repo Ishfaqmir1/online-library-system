@@ -29,5 +29,5 @@ An online library management application built using **React**, **React Router**
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/online-library-system.git
+git clone https://github.com/Ishfaqmir1/online-library-system.git
 cd online-library-system
