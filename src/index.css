@@ -1,0 +1,270 @@
+/* index.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f0f0f;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  color: #f4f4f4;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  z-index: -1;
+  animation: floatBlob 10s infinite ease-in-out;
+}
+
+body::before {
+  width: 300px;
+  height: 300px;
+  background: #ff6ec4;
+  top: -100px;
+  left: -100px;
+}
+
+body::after {
+  width: 400px;
+  height: 400px;
+  background: #7873f5;
+  bottom: -150px;
+  right: -150px;
+}
+
+@keyframes floatBlob {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(20px, -30px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff6ec4;
+}
+.nav-links li a svg {
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover svg {
+  transform: scale(1.2);
+}
+
+
+.home,
+.browse-books,
+.book-details,
+.add-book {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.welcome-title {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 10px rgba(255, 110, 196, 0.5);
+}
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin: 1rem 0;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 110, 196, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.book-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.book-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  color: #ffb6f2;
+}
+
+.book-card p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.book-card a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background-color: #ff6ec4;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.book-card a:hover {
+  background-color: #e55cb0;
+}
+
+.book-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.search-bar {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 0.6rem 1rem;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.add-book-form input,
+.add-book-form textarea,
+.add-book-form select,
+.add-book-form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.add-book-form button {
+  background: #ff6ec4;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-book-form button:hover {
+  background: #ff4bb2;
+}
+
+.not-found {
+  text-align: center;
+  padding: 4rem 2rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.not-found h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ff6ec4;
+}
+
+.not-found p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.not-found .home-link {
+  color: #fff;
+  background: #ff6ec4;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.not-found .home-link:hover {
+  background: #ff3fa4;
+}
+
+
+.book-details h2,
+.add-book h2,
+.browse-books h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.book-details p,
+.add-book p,
+.browse-books p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
