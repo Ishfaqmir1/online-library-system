@@ -10,7 +10,7 @@ const Navbar = () => (
       <li><Link to="/add">Add Book</Link></li>
       <li>
         <a
-          href="https://github.com/yourusername/yourrepo" 
+          href="https://github.com/Ishfaqmir1/online-library-system.git" 
           target="_blank"
           rel="noopener noreferrer"
           title="GitHub Repository"
