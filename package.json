@@ -1,16 +1,12 @@
 {
-  "name": "library-system",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "homepage": "https://github.com/Ishfaqmir1/online-library-system.git",
+  "name": "online-library-system",
+  "version": "1.0.0",
+  "homepage": "https://ishfaqmir1.github.io/online-library-system/",
   "scripts": {
-     "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
